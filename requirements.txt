@@ -1,0 +1,22 @@
+# Port-Tracker Dependencies
+
+# LLM Providers (SAP AI Core)
+generative-ai-hub-sdk>=1.0.0
+langchain>=0.1.0
+langchain-core>=0.1.0
+
+# Market Data
+yfinance>=0.2.0
+
+# News & Search
+tavily-python>=0.3.0
+
+# Observability
+langsmith>=0.1.0
+
+# Utilities
+python-dotenv>=1.0.0
+pandas>=2.0.0
+
+# Optional: Email alerts
+# aiosmtplib>=3.0.0

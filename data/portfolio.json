@@ -1,0 +1,29 @@
+{
+  "name": "My Portfolio",
+  "holdings": [
+    {
+      "ticker": "SLV",
+      "name": "iShares Silver Trust",
+      "asset_type": "etf",
+      "sector": "precious_metals",
+      "correlated_assets": ["GLD", "GOLD", "DXY", "TLT", "PAAS"],
+      "risk_factors": ["fed policy", "dollar strength", "inflation", "industrial demand", "real rates"]
+    },
+    {
+      "ticker": "GLD",
+      "name": "SPDR Gold Trust",
+      "asset_type": "etf",
+      "sector": "precious_metals",
+      "correlated_assets": ["SLV", "DXY", "TLT", "VIX", "NEM"],
+      "risk_factors": ["fed policy", "geopolitical", "inflation", "real rates", "central bank buying"]
+    },
+    {
+      "ticker": "QQQ",
+      "name": "Invesco QQQ Trust",
+      "asset_type": "etf",
+      "sector": "tech",
+      "correlated_assets": ["SPY", "AAPL", "MSFT", "NVDA", "META"],
+      "risk_factors": ["rate hikes", "earnings", "AI sentiment", "growth stocks", "antitrust"]
+    }
+  ]
+}
