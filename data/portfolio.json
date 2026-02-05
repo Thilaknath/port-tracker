@@ -2,28 +2,134 @@
   "name": "My Portfolio",
   "holdings": [
     {
-      "ticker": "SLV",
-      "name": "iShares Silver Trust",
-      "asset_type": "etf",
-      "sector": "precious_metals",
-      "correlated_assets": ["GLD", "GOLD", "DXY", "TLT", "PAAS"],
-      "risk_factors": ["fed policy", "dollar strength", "inflation", "industrial demand", "real rates"]
+      "ticker": "OKLO",
+      "name": "Oklo Inc",
+      "asset_type": "stock",
+      "sector": "nuclear_energy",
+      "quantity": 5,
+      "avg_price": 42.96,
+      "correlated_assets": ["SMR", "NNE", "CCJ", "URA", "NLR"],
+      "risk_factors": ["nuclear regulation", "energy policy", "licensing approval", "government contracts", "technology risk"]
     },
     {
-      "ticker": "GLD",
-      "name": "SPDR Gold Trust",
+      "ticker": "IBIT",
+      "name": "iShares Bitcoin Trust ETF",
       "asset_type": "etf",
-      "sector": "precious_metals",
-      "correlated_assets": ["SLV", "DXY", "TLT", "VIX", "NEM"],
-      "risk_factors": ["fed policy", "geopolitical", "inflation", "real rates", "central bank buying"]
+      "sector": "crypto",
+      "quantity": 19,
+      "avg_price": 51.0284,
+      "correlated_assets": ["BTC-USD", "MSTR", "COIN", "GBTC", "ETHE"],
+      "risk_factors": ["crypto regulation", "fed policy", "risk sentiment", "halving cycle", "institutional flows"]
     },
     {
-      "ticker": "QQQ",
-      "name": "Invesco QQQ Trust",
-      "asset_type": "etf",
+      "ticker": "AAPL",
+      "name": "Apple Inc",
+      "asset_type": "stock",
       "sector": "tech",
-      "correlated_assets": ["SPY", "AAPL", "MSFT", "NVDA", "META"],
-      "risk_factors": ["rate hikes", "earnings", "AI sentiment", "growth stocks", "antitrust"]
+      "quantity": 4,
+      "avg_price": 142.39,
+      "correlated_assets": ["QQQ", "MSFT", "SPY", "NVDA", "GOOGL"],
+      "risk_factors": ["earnings", "china sales", "iphone demand", "services growth", "antitrust"]
+    },
+    {
+      "ticker": "NVDA",
+      "name": "Nvidia Corp",
+      "asset_type": "stock",
+      "sector": "semiconductors",
+      "quantity": 12,
+      "avg_price": 113.3516,
+      "correlated_assets": ["AMD", "AVGO", "TSM", "SMH", "QQQ"],
+      "risk_factors": ["AI demand", "china export restrictions", "datacenter spending", "competition", "valuation"]
+    },
+    {
+      "ticker": "ZGLH.TO",
+      "name": "BMO Gold ETF (CAD Hedged)",
+      "asset_type": "etf",
+      "sector": "precious_metals",
+      "quantity": 50,
+      "avg_price": 36.54,
+      "correlated_assets": ["GLD", "ZGLD.TO", "DXY", "TLT", "CAD=X"],
+      "risk_factors": ["fed policy", "dollar strength", "inflation", "real rates", "cad/usd hedging"]
+    },
+    {
+      "ticker": "ZGLD.TO",
+      "name": "BMO Gold ETF",
+      "asset_type": "etf",
+      "sector": "precious_metals",
+      "quantity": 63,
+      "avg_price": 40.9558,
+      "correlated_assets": ["GLD", "ZGLH.TO", "DXY", "TLT", "CAD=X"],
+      "risk_factors": ["fed policy", "dollar strength", "inflation", "real rates", "cad exposure"]
+    },
+    {
+      "ticker": "XBB.TO",
+      "name": "iShares Core Canadian Universe Bond ETF",
+      "asset_type": "etf",
+      "sector": "bonds",
+      "quantity": 225,
+      "avg_price": 27.4089,
+      "correlated_assets": ["VAB.TO", "ZAG.TO", "TLT", "AGG", "BND"],
+      "risk_factors": ["interest rates", "bank of canada policy", "credit spreads", "inflation", "duration risk"]
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft Corp",
+      "asset_type": "stock",
+      "sector": "tech",
+      "quantity": 17,
+      "avg_price": 310.8805,
+      "correlated_assets": ["AAPL", "GOOGL", "QQQ", "SPY", "NVDA"],
+      "risk_factors": ["AI investment", "cloud growth", "earnings", "antitrust", "gaming"]
+    },
+    {
+      "ticker": "VAB.TO",
+      "name": "Vanguard Canadian Aggregate Bond ETF",
+      "asset_type": "etf",
+      "sector": "bonds",
+      "quantity": 760,
+      "avg_price": 22.6792,
+      "correlated_assets": ["XBB.TO", "ZAG.TO", "TLT", "AGG", "BND"],
+      "risk_factors": ["interest rates", "bank of canada policy", "credit spreads", "inflation", "duration risk"]
+    },
+    {
+      "ticker": "XEF.TO",
+      "name": "iShares MSCI EAFE ETF",
+      "asset_type": "etf",
+      "sector": "international_equities",
+      "quantity": 500,
+      "avg_price": 48.29,
+      "correlated_assets": ["VEA", "EFA", "IEFA", "VWO", "VTI"],
+      "risk_factors": ["global growth", "currency risk", "european economy", "japan policy", "geopolitical"]
+    },
+    {
+      "ticker": "XIC.TO",
+      "name": "iShares Core S&P/TSX Capped Composite ETF",
+      "asset_type": "etf",
+      "sector": "canadian_equities",
+      "quantity": 580,
+      "avg_price": 52.9274,
+      "correlated_assets": ["XIU.TO", "VCN.TO", "ZCN.TO", "TSX", "CAD=X"],
+      "risk_factors": ["oil prices", "bank of canada", "housing market", "commodity prices", "us trade policy"]
+    },
+    {
+      "ticker": "VEQT.TO",
+      "name": "Vanguard All-Equity ETF Portfolio",
+      "asset_type": "etf",
+      "sector": "global_equities",
+      "quantity": 562,
+      "avg_price": 46.8643,
+      "correlated_assets": ["XEQT.TO", "VTI", "VT", "SPY", "XIC.TO"],
+      "risk_factors": ["global growth", "us market", "currency risk", "recession risk", "geopolitical"]
+    },
+    {
+      "ticker": "VTI",
+      "name": "Vanguard Total Stock Market ETF",
+      "asset_type": "etf",
+      "sector": "us_equities",
+      "quantity": 195.498,
+      "avg_price": 265.6368,
+      "correlated_assets": ["SPY", "VOO", "QQQ", "IWM", "VIG"],
+      "risk_factors": ["fed policy", "recession risk", "earnings", "inflation", "valuations"]
     }
   ]
 }
