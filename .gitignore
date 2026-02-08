@@ -53,3 +53,7 @@ data/events/*.json
 .pytest_cache/
 .coverage
 htmlcov/
+
+# MD
+SESSION_SUMMARY.md
+
