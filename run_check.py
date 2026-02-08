@@ -20,6 +20,7 @@ load_dotenv()
 
 from src.portfolio.holdings import load_portfolio, Portfolio, Holding
 from src.analysis.risk_analyzer import RiskAnalyzer
+from src.analysis.concentration_analyzer import ConcentrationAnalyzer
 from src.alerts.notifier import AlertNotifier, create_alerts_from_assessment
 
 
@@ -61,17 +62,25 @@ def main():
         print(f"Filtering to: {', '.join(portfolio.get_tickers())}")
 
     # Run analysis
-    print(f"\n[1/3] Gathering market data...")
+    print(f"\n[1/4] Gathering market data...")
     analyzer = RiskAnalyzer(model=args.model)
 
-    print(f"[2/3] Analyzing risks with {args.model}...")
+    print(f"[2/4] Analyzing risks with {args.model}...")
     assessment = analyzer.analyze(portfolio)
 
-    print(f"[3/3] Generating report...")
+    print(f"[3/4] Analyzing sector concentration...")
+    conc_analyzer = ConcentrationAnalyzer()
+    conc_analysis = conc_analyzer.analyze(portfolio)
+
+    print(f"[4/4] Generating report...")
 
     # Format and display report
     report = analyzer.format_report(assessment, portfolio)
     print(report)
+
+    # Display concentration analysis
+    conc_report = conc_analyzer.format_report(conc_analysis)
+    print(conc_report)
 
     # Create alerts
     notifier = AlertNotifier()

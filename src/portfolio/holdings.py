@@ -17,13 +17,15 @@ class Holding:
     sector: str  # tech, precious_metals, energy, healthcare, etc.
     correlated_assets: List[str] = field(default_factory=list)
     risk_factors: List[str] = field(default_factory=list)
+    quantity: Optional[float] = None
+    avg_price: Optional[float] = None
 
     def __post_init__(self):
         self.ticker = self.ticker.upper()
         self.correlated_assets = [t.upper() for t in self.correlated_assets]
 
     def to_dict(self) -> dict:
-        return {
+        result = {
             "ticker": self.ticker,
             "name": self.name,
             "asset_type": self.asset_type,
@@ -31,6 +33,11 @@ class Holding:
             "correlated_assets": self.correlated_assets,
             "risk_factors": self.risk_factors
         }
+        if self.quantity is not None:
+            result["quantity"] = self.quantity
+        if self.avg_price is not None:
+            result["avg_price"] = self.avg_price
+        return result
 
 
 @dataclass
@@ -130,7 +137,9 @@ def load_portfolio(filepath: str = "data/portfolio.json") -> Portfolio:
             asset_type=h.get("asset_type", "stock"),
             sector=h.get("sector", "unknown"),
             correlated_assets=h.get("correlated_assets", []),
-            risk_factors=h.get("risk_factors", [])
+            risk_factors=h.get("risk_factors", []),
+            quantity=h.get("quantity"),
+            avg_price=h.get("avg_price")
         ))
 
     return Portfolio(
